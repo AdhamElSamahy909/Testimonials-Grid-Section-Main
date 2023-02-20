@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+/* VARIABLES */
+
+:root {
+
+    /* TEXT COLORS */
+
+    --White: hsl(0, 0%, 100%);
+    --Very-Dark-Blakish-Blue: hsl(219, 29%, 14%);
+    --Light-Gray: hsla(0, 0%, 100%, 0.716);
+    --Light-Black: hsla(217, 30%, 14%, 0.788);
+
+    /* CARD BACKGROUND COLORS */
+
+    --Daniel-Card-Background: #144272;
+    --Daniel-Card-Background-hover: #144272;
+
+    --Jonathan-Card-Background: #4B6CB7;
+    --Jonathan-Card-Background-hover: #182848;
+
+    --jeanette-Card-Background: #FAFAFA;
+    --jeanette-Card-Background-hover: #FAFAFA; 
+
+    --Patrick-Card-Background: #4B6CB7;
+    --Patrick-Card-Background-hover: #182848;
+
+    --Kira-Card-Background: #FAFAFA;
+    --Kira-Card-Background-hover: #FAFAFA;
+
+
+    /* --Moderate-Violet: #F0F5FB;
+    --Very-Dark-Grayish-Blue: #BAC8E0;
+    --Very-Dark-Blakish-Bkue: #4B6CB7;
+    --White: #FAFAFA;
+    --White-Text: hsl(0, 0%, 100%);
+    --Black-Text: hsl(0, 0%, 0%); */
+
+    --Transition: 0.5s ease;
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    border: none;
+}
+
+
+
+/* LAYOUT */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../images/jackson-hendry-eodA_8CTOFo-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-container {
+    max-width: 71rem;
+    display: grid;
+    place-content: center;
+    gap: 1.25rem;
+    padding: 1.25rem;
+}
+
+/* CARD GENERAL STYLING */
+
+.card {
+    border-radius: 0.5rem;
+    padding: 2.05rem;
+    box-shadow: 0 0.125rem 0.9375rem 0.25rem rgba(0,0,0,0.1);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    transition: var(--Transition);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.person {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1.15rem;
+    margin-bottom: 1.25rem;
+}
+
+.img-person {
+    border-radius: 100%;
+    border-style: solid;
+    max-width: 1.9rem;
+}
+
+.name-verification-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 3px;
+}
+
+.person-name {
+    align-self: flex-start;
+    font-size: 0.8rem;
+}
+
+.person-verification  {
+    align-self: flex-start;
+    font-size: 0.7rem;
+}
+
+.bold-quote {
+    font-weight: 700;
+    padding-bottom: 0.7rem;
+    font-size: clamp(1rem, calc(0.9rem + 0.51vw), 1.25rem);
+    transition: var(--Transition);
+}
+
+.quote {
+    font-size: clamp(0.8rem, calc(0.5rem + 0.74vw), 0.81rem);
+}
+
+
+
+
+/* CARD STYLING */
+
+.daniel-card {
+    /* background-image: url(images/bg-pattern-quotation.svg); */
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+
+    background-color: var(--Daniel-Card-Background);
+    color: var(--White);
+}
+
+.daniel-card:hover {
+    background-color: var(--Daniel-Card-Background-hover);
+}
+
+.jonathan-card {
+    background-color: var(--Jonathan-Card-Background);
+    color: var(--White);
+}
+
+.jonathan-card:hover {
+    background-color: var(--Jonathan-Card-Background-hover);
+}
+
+.jeanette-card {
+    background-color: var(--jeanette-Card-Background);
+    color: var(--Very-Dark-Blakish-Blue);
+}
+
+.jeanette-card:hover {
+    background-color: var(--jeanette-Card-Background-hover);
+}
+
+.patrick-card {
+    background-color: var(--Patrick-Card-Background);
+    color: var(--White);
+}
+
+.patrick-card:hover {
+    background-color: var(--Patrick-Card-Background-hover);
+}
+
+.kira-card {
+    background-color: var(--Kira-Card-Background);
+    color: var(--Very-Dark-Blakish-Blue);
+}
+
+.kira-card:hover {
+    background-color: var(--Kira-Card-Background-hover);
+}
+
+.img-daniel,
+.img-jonathan,
+.img-patrick {
+    border-color: var(--White);
+}
+
+.img-jeanette,
+.img-kira {
+    border-color: var(--Very-Dark-Blakish-Blue);
+}
+
+.quote-daniel,
+.quote-jonathan,
+.quote-patrick,
+.verified-daniel,
+.verified-jonathan,
+.verified-patrick {
+    color: var(--Light-Gray);
+}
+
+.quote-jeanette,
+.quote-kira,
+.verified-jeanette,
+.verified-kira {
+    color: var(--Light-Black);
+}
+
+/* MEDIA QUERY */
+
+@media screen and (min-width: 900px) {
+
+.card-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.daniel-card {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.jonathan-card {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.jeanette-card {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.patrick-card {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.kira-card {
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+}
+
+@media screen and (max-width: 900px) and (min-width: 500px) {
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .daniel-card {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    
+    .jonathan-card {
+        grid-row-start: 3;
+        grid-column-start: 2;
+    }
+
+    .kira-card {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .jeanette-card {
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .patrick-card {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+    }
+}
